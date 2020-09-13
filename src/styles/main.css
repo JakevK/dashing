@@ -1,0 +1,20 @@
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&family=Archivo:wght@400;500;700&family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* colors */
+:root {
+    --dark-blue: #3D5A80;
+    --mid-blue: #98C1D9;
+    --light-blue: #E0FBFC;
+    --orange: #EE6C4D;
+    --black: #293241;
+}
+
+/* some default stuff */
+body {
+    font-family: 'Arimo', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--light-blue);
+    background-size: 100% auto;
+}
