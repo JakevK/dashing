@@ -1,43 +1,60 @@
 import React from "react";
 
 import {
+    TransitionGroup,
+    CSSTransition
+} from "react-transition-group";
+
+import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    NavLink,
+    useLocation
 } from "react-router-dom";
 
 import * as Pages from './pages/index';
 import './styles/nav.css';
+import './styles/transitions.css';
 
 
 export default function App() {
+    let location = useLocation();
     return (
         <Router>
             <div>
                 <nav>
+                    <Link to="/">dashing</Link>
                     <ul>
                         <li>
-                            <Link to="/">MorseCode</Link>
+                            <NavLink activeClassName="activeNavLink" to="/history">history</NavLink>
                         </li>
                         <li>
-                            <Link to="/history">History</Link>
+                            <NavLink activeClassName="activeNavLink" to="/theory">theory</NavLink>
                         </li>
                         <li>
-                            <Link to="/theory">Theory</Link>
-                        </li>
-                        <li>
-                            <Link to="/practice">Practice</Link>
+                            <NavLink activeClassName="activeNavLink" to="/practice">practice</NavLink>
                         </li>
                     </ul>
                 </nav>
 
-                <Switch>
-                    <Route path="/practice" component={Pages.Practice}/>
-                    <Route path="/theory" component={Pages.Theory}/>
-                    <Route path="/history" component={Pages.History}/>
-                    <Route path="/" component={Pages.Home}/>
-                </Switch>
+                <div className="container">
+                    <TransitionGroup>
+                        <CSSTransition
+                            key={location.key}
+                            classNames="fade"
+                            timeout={300}
+                        >
+                            <Switch location={location}>
+                                <Route path="/practice" component={Pages.Practice} />
+                                <Route path="/theory" component={Pages.Theory} />
+                                <Route path="/history" component={Pages.History} />
+                                <Route exact path="/" component={Pages.Home} />
+                            </Switch>
+                        </CSSTransition>
+                    </TransitionGroup>
+                </div>
             </div>
         </Router>
     );

@@ -1,7 +1,32 @@
 import React from "react";
+import { Switch, Link, Route, useRouteMatch } from "react-router-dom";
+import Classic from './practice/Classic';
+import '../styles/practice.css';
 
 export default function Practice() {
+    let match = useRouteMatch();
     return (
-        <h1>Practice</h1>
-    )
+        <div>
+            <Switch>
+                <Route path={`${match.path}/:mode`}>
+                    <Classic />
+                </Route>
+                <Route path={match.path}>
+                    <div className="practice-menu-container">
+                        <h1>select a practice mode</h1>
+                        <div>
+                            <Link to={`${match.path}/morse-english`}>
+                                <h2>Morse to English</h2>
+                                <p>improve your comprehension skills</p>
+                            </Link>
+                            <Link to={`${match.path}/english-morse`}>
+                                <h2>English to Morse</h2>
+                                <p></p>
+                            </Link>
+                        </div>
+                    </div>
+                </Route>
+            </Switch>
+        </div>
+    );
 }

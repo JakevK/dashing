@@ -1,0 +1,57 @@
+.practice-menu-container {
+    display: block;
+    margin-top: 254px;
+    height: 79px;
+}
+.practice-menu-container > h1 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.14em;
+    margin-bottom: 50px;
+
+    color: var(--dark-purple);
+}
+.practice-menu-container div a {
+    display: block;
+    width: 381px;
+    height: 436px;
+    margin: 50px;
+
+    background: #FFFFFF;
+    border: 2px solid var(--dark-purple);
+    box-sizing: border-box;
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--dark-purple);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.practice-menu-container div a:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+}
+.practice-menu-container div a:active {
+    transform: scale(1);
+}
+.practice-menu-container div a h2 {
+    font-family: Source Code Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 35px;
+    text-align: center;
+    margin-top: 30px;
+}
+.practice-menu-container div a p {
+    text-align: center;
+    margin-top: 30px
+}
+.practice-menu-container div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
