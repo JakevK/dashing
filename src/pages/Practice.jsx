@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Link, Route, useRouteMatch } from "react-router-dom";
-import Classic from './practice/Classic';
+import EnglishToMorse from './practice/EnglishToMorse';
+import MorseToEnglish from './practice/MorseToEnglish';
 import '../styles/practice.css';
 
 export default function Practice() {
@@ -8,11 +9,14 @@ export default function Practice() {
     return (
         <div>
             <Switch>
-                <Route path={`${match.path}/:mode`}>
-                    <Classic />
+                <Route path={`${match.path}/english-morse`}>
+                    <EnglishToMorse />
+                </Route>
+                <Route path={`${match.path}/morse-english`}>
+                    <MorseToEnglish />
                 </Route>
                 <Route path={match.path}>
-                    <div className="practice-menu-container">
+                    <div className="container practice-menu-container">
                         <h1>select a practice mode</h1>
                         <div>
                             <Link to={`${match.path}/morse-english`}>

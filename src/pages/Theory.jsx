@@ -2,6 +2,8 @@ import React from "react";
 
 export default function Theory() {
     return (
-        <h1>Theory</h1>
+        <div className="container">
+            <h1>Theory</h1>
+        </div>
     )
 }

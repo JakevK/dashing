@@ -1,6 +1,6 @@
 .practice-menu-container {
     display: block;
-    margin-top: 254px;
+    margin-top: 100px;
     height: 79px;
 }
 .practice-menu-container > h1 {
@@ -54,4 +54,64 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+
+.practice-container p {
+    text-align: center;
+    font-family: Open Sans;
+    color: var(--dark-purple);
+}
+.question-string {
+    color: var(--dark-purple);
+    font-family: Source Code Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px; 
+    display: flex;
+    height: 60px;
+    justify-content: center;
+}
+.question-string .highlighted {
+    background-color: #FAFF00;
+}
+.question-string .morse {
+    margin: 0 20px;
+}
+.question-string .sides-left {
+    width: calc((100vw - 28.798px)/2 - 20px);
+    text-align: right;
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
+    direction: rtl;
+}
+.question-string .sides-right {
+    width: calc((100vw - 28.798px)/2 - 20px);
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.question-string .english {
+    width: calc((100vw - 28.798px)/2);
+}
+.practice-container input {
+    display: block;
+    width: 300px;
+    height: 40px;
+    font-size: 40px;
+    margin: 50px auto;
+    transition: background-color 0.1s;
+}
+.practice-container .green-input {
+    background-color: rgb(166, 250, 110);
+}
+
+.back-link {
+    display: block;
+    margin: -50px 0 50px 50px;
+    color: var(--dark-purple);
+    text-decoration: none;
+    font-family: Open Sans;
+    font-size: 20px;
 }

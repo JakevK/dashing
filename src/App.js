@@ -18,11 +18,17 @@ import * as Pages from './pages/index';
 import './styles/nav.css';
 import './styles/transitions.css';
 
-
 export default function App() {
-    let location = useLocation();
     return (
         <Router>
+            <Routes/>
+        </Router>
+    )
+}
+
+function Routes() {
+    let location = useLocation();
+    return (
             <div>
                 <nav>
                     <Link to="/">dashing</Link>
@@ -44,7 +50,7 @@ export default function App() {
                         <CSSTransition
                             key={location.key}
                             classNames="fade"
-                            timeout={300}
+                            timeout={500}
                         >
                             <Switch location={location}>
                                 <Route path="/practice" component={Pages.Practice} />
@@ -56,7 +62,6 @@ export default function App() {
                     </TransitionGroup>
                 </div>
             </div>
-        </Router>
     );
 }
 
