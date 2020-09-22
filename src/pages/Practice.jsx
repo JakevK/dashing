@@ -21,11 +21,11 @@ export default function Practice() {
                         <div>
                             <Link to={`${match.path}/morse-english`}>
                                 <h2>Morse to English</h2>
-                                <p>improve your comprehension skills</p>
+                                <p>improve your comprehension skills by interpreting written morse code messages</p>
                             </Link>
                             <Link to={`${match.path}/english-morse`}>
                                 <h2>English to Morse</h2>
-                                <p></p>
+                                <p>hone your morse code writing skills with given english words</p>
                             </Link>
                         </div>
                     </div>

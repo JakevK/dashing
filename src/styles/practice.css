@@ -37,7 +37,7 @@
     transform: scale(1);
 }
 .practice-menu-container div a h2 {
-    font-family: Source Code Pro;
+    font-family: 'Source Code Pro', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 28px;
@@ -59,12 +59,22 @@
 
 .practice-container p {
     text-align: center;
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     color: var(--dark-purple);
+}
+.question {
+    color: var(--dark-purple);
+    font-family: 'Source Code Pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px; 
+    height: 60px;
+    white-space: nowrap;
+    transition: transform 0.4s;
 }
 .question-string {
     color: var(--dark-purple);
-    font-family: Source Code Pro;
+    font-family: 'Source Code Pro', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 48px; 
@@ -105,6 +115,9 @@
 }
 .practice-container .green-input {
     background-color: rgb(166, 250, 110);
+}
+.practice-container .red-input {
+    background-color: rgb(250, 110, 110);
 }
 
 .back-link {

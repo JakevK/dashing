@@ -28,6 +28,7 @@ export default function MorseToEnglish() {
 
         setInput(event.key);
         const isCorrect = event.key === word[position];
+        setCorrect(isCorrect);
 
         setTimeout(() => {
             setCorrect(null);
@@ -52,18 +53,12 @@ export default function MorseToEnglish() {
             </Link>
 
             <div className="practice-container">
-                <div className="question-string">
-                    <div className="sides-left">
-                        {translate(word.slice(0, position))}
-                    </div>
-                    <div className="highlighted morse">
-                        {translate(word[position])}
-                    </div>
-                    <div className="sides-right">
-                        {translate(word.slice(position + 1, word.length + 1))}
-                    </div>
+                <div className="question" style={{
+                    transform: `translateX(calc(50vw - (28.8px * ${translate(word.slice(0, position)).length + (position > 0 ? 1 : 0)}) - ((28.8px * ${translate(word[position]).length}) / 2)))`
+                }}>
+                    {translate(word)}
                 </div>
-                <input type="text" onKeyDown={handleInput} value={input} />
+                <input type="text" className={correct === null ? "" : (correct ? "green-input" : "red-input")} onKeyDown={handleInput} value={input} />
                 <p>enter the english translation for the current morse code character</p>
             </div>
         </div>

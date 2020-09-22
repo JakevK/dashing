@@ -1,0 +1,10 @@
+.static p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 23px;
+    margin: 20px 40px;
+}
+.static img {
+    display: block;
+    width: 400px;
+    margin: 30px auto;
+}
