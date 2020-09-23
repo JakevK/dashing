@@ -63,18 +63,11 @@ export default function EnglishToMorse() {
                 change practice mode
             </Link>
             <div className="practice-container">
-                <div className="question-string">
-                    <div className="sides-left english">
-                        {word.slice(0, position)}
-                    </div>
-                    <div className="highlighted">
-                        {word[position]}
-                    </div>
-                    <div className="sides-right english">
-                        {word.slice(position + 1, word.length + 1)}
-                    </div>
-                </div>
-                <input type="text" className={!editable ? "green-input" : ""}onKeyDown={handleInput} value={input} />
+                <div className="highlight"></div>
+                <div className="question" style={{
+                    transform: `translateX(calc(50vw - (28.8px / 2) - (28.8px * ${position})))`// - (28.8px * ${position}))`
+                }}>{word}</div>
+                <input type="text" className={!editable ? "green-input" : ""} onKeyDown={handleInput} value={input} />
                 <p>enter the morse code translation for the current letter using the "." and "/" keys</p>
             </div>
         </div>

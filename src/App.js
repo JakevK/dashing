@@ -30,7 +30,7 @@ function Routes() {
     let location = useLocation();
     return (
             <div>
-                <nav>
+                <nav transform="translateX(0)">
                     <Link to="/">dashing</Link>
                     <ul>
                         <li>
@@ -64,7 +64,6 @@ function Routes() {
             </div>
     );
 }
-
 
 
 

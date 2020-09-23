@@ -53,6 +53,9 @@ export default function MorseToEnglish() {
             </Link>
 
             <div className="practice-container">
+                <div className="highlight" style={{
+                    width: `${28.8 * (translate(word[position]).length)}px`
+                }}></div>
                 <div className="question" style={{
                     transform: `translateX(calc(50vw - (28.8px * ${translate(word.slice(0, position)).length + (position > 0 ? 1 : 0)}) - ((28.8px * ${translate(word[position]).length}) / 2)))`
                 }}>

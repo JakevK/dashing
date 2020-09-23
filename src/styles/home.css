@@ -1,3 +1,32 @@
-
-nav {
+.main-title {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 67px;
+    line-height: 91px;
+    text-align: center;
+    letter-spacing: 0.305em;
+    color: var(--dark-purple);
+    margin-top: 50px;
+    z-index: 30;
+    position: relative;
+    display: block;
+}
+.sub-title {
+    margin-top: 59px;
+    position: relative;
+    font-family: 'Source Code Pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 35px;
+    text-align: center;
+    color: var(--dark-purple);
+    z-index: 30 !important;
+}
+.top-container {
+    position: fixed;
+    width: 100vw;
+    margin-top: 100px;
+    z-index: 1000;
 }

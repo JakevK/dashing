@@ -3,10 +3,52 @@ import useWindowDimensions from './hooks/useWindowDimensions'
 import '../styles/home.css';
 
 export default function Home() {
+    useEffect(() => {
+        let nav = document.getElementsByTagName('nav')[0];
+        const previousStyles = getComputedStyle(nav);
+        nav.style.height = '100vh';
+        nav.style.paddingTop = '520px';
+        nav.style.boxShadow = 'none';
+        nav.firstChild.style.display = 'none';
+        let ul = nav.children[1];
+        const previousUl = getComputedStyle(ul);
+        ul.style.width = '100%';
+        ul.style.display = 'flex';
+        ul.style.justifyContent = 'center';
+
+        const descriptions = {
+            "theory": "learn about how morse code works and how to use it",
+            "history": "learn about the development and use of morse code over time",
+            "practice": "have some fun and improve your skills"
+        }
+        for (let child of ul.children) {
+            let p = document.createElement("p");
+            let desc = child.firstChild;
+            let key = desc.innerHTML;
+            let description = descriptions[key];
+            let text= document.createTextNode(description);
+            p.appendChild(text);
+            child.firstChild.appendChild(p);
+            child.style.margin = '25px 50px';
+        }
+
+
+        return () => {
+            nav.style = previousStyles;
+            nav.firstChild.style.display = 'block';
+            ul.style = previousUl; 
+            for (let child of ul.children) {
+                child.firstChild.removeChild(child.firstChild.children[0]);
+                child.style.margin = "25px 0 0 0";
+            }
+        }
+    }, []);
+
     return (
         <div>
-            <div className="container">
-                <h1>Home</h1>
+            <div className="container top-container">
+                <h1 className="main-title">dashing</h1>
+                <h2 className="sub-title">dial in your morse code skills</h2>
             </div>
         </div>
     )

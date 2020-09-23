@@ -84,6 +84,19 @@
 }
 .question-string .highlighted {
     background-color: #FAFF00;
+    margin-left: 28.8px;
+    margin-right: 28.8px;
+}
+.highlight {
+    display: block;
+    height: 60px;
+    background-color: #FAFF00;
+    position: fixed;
+    left: 50vw;
+    transform: translateX(-50%);
+    transition: width 0.4s;
+    width: 28.8px;
+    border-radius: 5px;
 }
 .question-string .morse {
     margin: 0 20px;
