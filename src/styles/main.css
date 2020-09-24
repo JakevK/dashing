@@ -1,3 +1,7 @@
+/* main.css
+ * basic styling for the whole website
+*/
+
 /* import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&family=Open+Sans:wght@300;400;700&family=Source+Code+Pro&display=swap');
 
@@ -7,7 +11,7 @@
     --dark-purple: #34344A;
 }
 
-/* some default stuff */
+/* some default styles */
 body {
     font-family: 'Open Sans', sans-serif;
     color: var(--dark-purple);

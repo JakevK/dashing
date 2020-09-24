@@ -3,7 +3,7 @@
 */
 
 /* -- imports -- */
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import '../styles/home.css';
 
 
