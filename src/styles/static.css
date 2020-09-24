@@ -2,9 +2,13 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 23px;
     margin: 20px 40px;
+    line-height: 1.5em;
 }
 .static img {
     display: block;
     width: 400px;
     margin: 30px auto;
+}
+.static .center {
+    text-align: center;
 }

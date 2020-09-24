@@ -14,14 +14,14 @@ import {
     useLocation
 } from "react-router-dom";
 
-import * as Pages from './pages/index';
+import * as Pages from './pages';
 import './styles/nav.css';
 import './styles/transitions.css';
 
 export default function App() {
     return (
         <Router>
-            <Routes/>
+            <Routes />
         </Router>
     )
 }
@@ -57,6 +57,7 @@ function Routes() {
                                 <Route path="/theory" component={Pages.Theory} />
                                 <Route path="/history" component={Pages.History} />
                                 <Route exact path="/" component={Pages.Home} />
+                                <Route path="/" component={Pages.Error} />
                             </Switch>
                         </CSSTransition>
                     </TransitionGroup>

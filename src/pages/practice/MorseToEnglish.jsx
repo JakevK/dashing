@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import left_arrow from '../images/left_arrow.svg';
+
 import '../../styles/practice.css';
 
 import randomWord from './resources/randomWord.jsx';
@@ -21,6 +23,11 @@ export default function MorseToEnglish() {
     let [position, setPosition] = useState(0);
     let [input, setInput] = useState("");
     let [correct, setCorrect] = useState(null);
+    let [answerShown, setAnswerShown] = useState(false);
+
+    const showAnswer = () => {
+        setAnswerShown(true);
+    }
 
     const handleInput = event => {
         if (correct !== null) return;
@@ -34,6 +41,7 @@ export default function MorseToEnglish() {
             setCorrect(null);
             setInput("");
             if (isCorrect) {
+                setAnswerShown(false);
                 if (position === word.length - 1) {
                     setPosition(0);
                     setWord(randomWord());
@@ -47,8 +55,9 @@ export default function MorseToEnglish() {
     }
 
     return (
-        <div className="container">
+        <div className="container practice-main">
             <Link to="/practice" className="back-link">
+                <img src={left_arrow} className="left-arrow" alt="<-" />
                 change practice mode
             </Link>
 
@@ -63,6 +72,8 @@ export default function MorseToEnglish() {
                 </div>
                 <input type="text" className={correct === null ? "" : (correct ? "green-input" : "red-input")} onKeyDown={handleInput} value={input} />
                 <p>enter the english translation for the current morse code character</p>
+                <div className="answer" style={{ display: (answerShown ? "block" : "none") }}>answer: {word[position]}</div>
+                <div className="reveal-btn" style={{ display: (answerShown ? "none" : "block") }} onClick={showAnswer}>show answer</div>
             </div>
         </div>
     );

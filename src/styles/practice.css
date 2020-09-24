@@ -18,7 +18,7 @@
 .practice-menu-container div a {
     display: block;
     width: 381px;
-    height: 436px;
+    height: 200px;
     margin: 50px;
 
     background: #FFFFFF;
@@ -47,7 +47,7 @@
 }
 .practice-menu-container div a p {
     text-align: center;
-    margin-top: 30px
+    margin: 40px 30px;
 }
 .practice-menu-container div {
     display: flex;
@@ -61,6 +61,11 @@
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     color: var(--dark-purple);
+}
+.practice-main {
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
 }
 .question {
     color: var(--dark-purple);
@@ -91,7 +96,7 @@
     display: block;
     height: 60px;
     background-color: #FAFF00;
-    position: fixed;
+    position: absolute;
     left: 50vw;
     transform: translateX(-50%);
     transition: width 0.4s;
@@ -135,9 +140,49 @@
 
 .back-link {
     display: block;
-    margin: -50px 0 50px 50px;
+    margin: 0px 0 50px 50px;
     color: var(--dark-purple);
     text-decoration: none;
     font-family: Open Sans;
     font-size: 20px;
+    transition: transform 0.5s;
+    width: 400px;
+}
+
+
+.reveal-btn {
+    cursor: pointer;
+    color: var(--dark-purple);
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    padding: 16px;
+    width: 150px;
+    border-radius: 10px;
+    margin: 0 auto;
+    transition: transform 0.2s;
+    border: 1px solid var(--dark-purple);
+    margin-top: 50px;
+}
+.reveal-btn:active {
+    transform: translateY(2px);
+}
+.reveal-btn:hover {
+    transform: scale(1.1);
+}
+.answer {
+    text-align: center;
+    font-size: 20px;
+    padding: 16px;
+    margin-top: 50px;
+}
+.left-arrow {
+    width: 30px;
+    transform: translateY(15px);
+    margin-right: 20px;
+}
+
+.back-link:hover {
+    transform: translateX(-20px);
+
 }
