@@ -18,7 +18,7 @@
 .practice-menu-container div a {
     display: block;
     width: 381px;
-    height: 200px;
+    height: 205px;
     margin: 50px;
 
     background: #FFFFFF;
@@ -48,6 +48,7 @@
 .practice-menu-container div a p {
     text-align: center;
     margin: 40px 30px;
+    line-height: 1.5;
 }
 .practice-menu-container div {
     display: flex;

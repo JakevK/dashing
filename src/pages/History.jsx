@@ -1,8 +1,16 @@
+/* History
+ * Brief summary of morse code history
+*/
+
+/* -- imports -- */
 import React from "react";
 import '../styles/static.css';
 import telegraph from './images/telegraph.gif'
 
+
+// exported component
 export default function History() {
+    // return static HTML content
     return (
         <div className="container static">
             <h1>History</h1>

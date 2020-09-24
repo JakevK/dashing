@@ -1,8 +1,16 @@
+/* Theory
+ * Brief summary of how morse code works
+*/
+
+/* -- imports -- */
 import React from "react";
 import '../styles/static.css';
 import alphabet from './images/alphabet.png';
 
+
+// exported component
 export default function Theory() {
+    // return static HTML content
     return (
         <div className="container static">
             <h1>Theory</h1>

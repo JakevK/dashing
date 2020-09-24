@@ -1,9 +1,17 @@
+/* Home
+ * landing page / home page
+*/
+
+/* -- imports -- */
 import React, { useState, useEffect } from 'react';
-import useWindowDimensions from './hooks/useWindowDimensions'
 import '../styles/home.css';
 
+
+// Exported component
 export default function Home() {
+    // run on component mount - empty array as second parameter
     useEffect(() => {
+        // apply styling to move navigation bar down and remove title
         let nav = document.getElementsByTagName('nav')[0];
         const previousStyles = getComputedStyle(nav);
         nav.style.height = '100vh';
@@ -16,11 +24,13 @@ export default function Home() {
         ul.style.display = 'flex';
         ul.style.justifyContent = 'center';
 
+        // define descriptions for nav links
         const descriptions = {
             "theory": "learn about how morse code works and how to use it",
             "history": "learn about the development and use of morse code over time",
             "practice": "have some fun and improve your skills"
         }
+        // add descriptions to each nav link and give them some styling
         for (let child of ul.children) {
             let p = document.createElement("p");
             let desc = child.firstChild;
@@ -33,7 +43,9 @@ export default function Home() {
         }
 
 
+        // runs on component unmount
         return () => {
+            // reset styling of navbar to what it was before
             nav.style = previousStyles;
             nav.firstChild.style.display = 'block';
             ul.style = previousUl; 
@@ -44,6 +56,7 @@ export default function Home() {
         }
     }, []);
 
+    // return static HTML content
     return (
         <div>
             <div className="container top-container">
@@ -53,50 +66,3 @@ export default function Home() {
         </div>
     )
 }
-
-/*
-const Background = () => {
-    const { height, width } = useWindowDimensions();
-    let [positions, setPositions] = useState({
-        "#FF0000": [0, 0],
-        "#0000FF": [0, 0],
-        "#FFFF00": [0, 0]
-    });
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            let newPositions = positions;
-            for (let dot in newPositions) {
-                newPositions[dot] = [
-                    Math.floor(Math.random() * width),
-                    Math.floor(Math.random() * height)
-                ]
-            }
-            setPositions(newPositions);
-        }, 1000);
-        return () => clearInterval(interval);
-    }, []);
-
-    const dots = Object.entries(positions).map(position => 
-        <div key={position} style={{
-            display: "block",
-            width: "100px",
-            height: "100px",
-            backgroundColor: position[0],
-            position: "absolute",
-            borderRadius: "50%",
-            top: position[1][1] + "px",
-            left: position[1][0] + "px"
-        }}></div>
-    );
-    console.log(positions);
-
-
-    return (
-        <div>
-            {dots}
-        </div>
-    );
-}
-
-*/

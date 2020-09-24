@@ -1,11 +1,21 @@
+/* Practice
+ * menu for selecting a practice mode
+*/
+
+/* -- imports -- */
 import React from "react";
 import { Switch, Link, Route, useRouteMatch } from "react-router-dom";
 import EnglishToMorse from './practice/EnglishToMorse';
 import MorseToEnglish from './practice/MorseToEnglish';
 import '../styles/practice.css';
 
+
+// Exported component
 export default function Practice() {
+    // get current route to add new routes onto
     let match = useRouteMatch();
+    // return content to be rendered
+    // defines routes for the existing BrowserRouter in a higher level component
     return (
         <div>
             <Switch>

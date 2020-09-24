@@ -1,3 +1,9 @@
+/* App
+ * Main app file
+ * defines router and navigation bar
+*/
+
+/* -- imports -- */
 import React from "react";
 
 import {
@@ -18,7 +24,10 @@ import * as Pages from './pages';
 import './styles/nav.css';
 import './styles/transitions.css';
 
+
+// exported component
 export default function App() {
+    // return router
     return (
         <Router>
             <Routes />
@@ -26,10 +35,15 @@ export default function App() {
     )
 }
 
+
+// define routes for BrowserRouter and navigation bar
 function Routes() {
+    // get current location using hook
     let location = useLocation();
+    // return content to be rendered
     return (
             <div>
+                {/* navigation bar - rendered on all pages */}
                 <nav transform="translateX(0)">
                     <Link to="/">dashing</Link>
                     <ul>
@@ -45,6 +59,7 @@ function Routes() {
                     </ul>
                 </nav>
 
+                {/* routing with transitions react-transition-group */}
                 <div className="container">
                     <TransitionGroup>
                         <CSSTransition
