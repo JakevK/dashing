@@ -1,0 +1,227 @@
+[
+  {
+    "char": "0",
+    "morse": "-----",
+    "type": "number"
+  },
+  {
+    "char": "1",
+    "morse": ".----",
+    "type": "number"
+  },
+  {
+    "char": "2",
+    "morse": "..---",
+    "type": "number"
+  },
+  {
+    "char": "3",
+    "morse": "...--",
+    "type": "number"
+  },
+  {
+    "char": "4",
+    "morse": "....-",
+    "type": "number"
+  },
+  {
+    "char": "5",
+    "morse": ".....",
+    "type": "number"
+  },
+  {
+    "char": "6",
+    "morse": "-....",
+    "type": "number"
+  },
+  {
+    "char": "7",
+    "morse": "--...",
+    "type": "number"
+  },
+  {
+    "char": "8",
+    "morse": "---..",
+    "type": "number"
+  },
+  {
+    "char": "9",
+    "morse": "----.",
+    "type": "number"
+  },
+  {
+    "char": "a",
+    "morse": ".-",
+    "type": "letter"
+  },
+  {
+    "char": "b",
+    "morse": "-...",
+    "type": "letter"
+  },
+  {
+    "char": "c",
+    "morse": "-.-.",
+    "type": "letter"
+  },
+  {
+    "char": "d",
+    "morse": "-..",
+    "type": "letter"
+  },
+  {
+    "char": "e",
+    "morse": ".",
+    "type": "letter"
+  },
+  {
+    "char": "f",
+    "morse": "..-.",
+    "type": "letter"
+  },
+  {
+    "char": "g",
+    "morse": "--.",
+    "type": "letter"
+  },
+  {
+    "char": "h",
+    "morse": "....",
+    "type": "letter"
+  },
+  {
+    "char": "i",
+    "morse": "..",
+    "type": "letter"
+  },
+  {
+    "char": "j",
+    "morse": ".---",
+    "type": "letter"
+  },
+  {
+    "char": "k",
+    "morse": "-.-",
+    "type": "letter"
+  },
+  {
+    "char": "l",
+    "morse": ".-..",
+    "type": "letter"
+  },
+  {
+    "char": "m",
+    "morse": "--",
+    "type": "letter"
+  },
+  {
+    "char": "n",
+    "morse": "-.",
+    "type": "letter"
+  },
+  {
+    "char": "o",
+    "morse": "---",
+    "type": "letter"
+  },
+  {
+    "char": "p",
+    "morse": ".--.",
+    "type": "letter"
+  },
+  {
+    "char": "q",
+    "morse": "--.-",
+    "type": "letter"
+  },
+  {
+    "char": "r",
+    "morse": ".-.",
+    "type": "letter"
+  },
+  {
+    "char": "s",
+    "morse": "...",
+    "type": "letter"
+  },
+  {
+    "char": "t",
+    "morse": "-",
+    "type": "letter"
+  },
+  {
+    "char": "u",
+    "morse": "..-",
+    "type": "letter"
+  },
+  {
+    "char": "v",
+    "morse": "...-",
+    "type": "letter"
+  },
+  {
+    "char": "w",
+    "morse": ".--",
+    "type": "letter"
+  },
+  {
+    "char": "x",
+    "morse": "-..-",
+    "type": "letter"
+  },
+  {
+    "char": "y",
+    "morse": "-.--",
+    "type": "letter"
+  },
+  {
+    "char": "z",
+    "morse": "--..",
+    "type": "letter"
+  },
+  {
+    "char": ".",
+    "morse": ".-.-.-",
+    "type": "other"
+  },
+  {
+    "char": ",",
+    "morse": "--..--",
+    "type": "other"
+  },
+  {
+    "char": "?",
+    "morse": "..--..",
+    "type": "other"
+  },
+  {
+    "char": "!",
+    "morse": "-.-.--",
+    "type": "other"
+  },
+  {
+    "char": "-",
+    "morse": "-....-",
+    "type": "other"
+  },
+  {
+    "char": "/",
+    "morse": "-..-.",
+    "type": "other"
+  },
+  {
+    "char": "@",
+    "morse": ".--.-.",
+    "type": "other"
+  },
+  {
+    "char": "(",
+    "morse": "-.--.",
+    "type": "other"
+  },
+  {
+    "char": ")",
+    "morse": "-.--.-",
+    "type": "other"
+  }
+]

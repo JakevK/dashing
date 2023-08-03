@@ -1,0 +1,39 @@
+/* main.css
+ * basic styling for the whole website
+*/
+
+/* import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&family=Open+Sans:wght@300;400;700&family=Source+Code+Pro&display=swap");
+
+/* colors */
+:root {
+  --white: #ffffff;
+  --dark-purple: #34344a;
+}
+
+/* some default styles */
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--dark-purple);
+  height: 100vh;
+  background-color: var(--white);
+  background-size: 100% auto;
+}
+
+.container {
+  margin-top: 56px;
+  width: 100vw;
+  position: absolute;
+}
+
+h1 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 34px;
+  text-align: center;
+  margin-bottom: 18px;
+
+  color: var(--dark-purple);
+}

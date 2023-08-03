@@ -1,0 +1,36 @@
+/* home.css
+ * styling for the home/landing page
+*/
+
+.main-title {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 56px;
+  text-align: center;
+  letter-spacing: 0.305em;
+  color: var(--dark-purple);
+  margin-top: 12px;
+  z-index: 30;
+  position: relative;
+  display: block;
+}
+.sub-title {
+  margin-top: 12px;
+  position: relative;
+  font-family: "Source Code Pro", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 35px;
+  text-align: center;
+  color: var(--dark-purple);
+  z-index: 30 !important;
+}
+.top-container {
+  position: fixed;
+  width: 100vw;
+  margin-top: 54px;
+  z-index: 1000;
+}
